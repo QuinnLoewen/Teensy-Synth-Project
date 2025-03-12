@@ -21,46 +21,6 @@ The **Teensy Synth Project** is a powerful and portable synthesizer leveraging t
 
 ---
 
-## 📁 Repository Structure
-
-Teensy-Synth-Project/ ├── README.md
-├── LICENSE.md
-├── .gitignore
-├── Hardware/
-│ ├── Schematics/
-│ │ ├── teensy_pinout.pdf │ │ ├── audio_shield.pdf │ │ └── analog_filters.pdf │ ├── PCB_Layouts/
-│ ├── Datasheets/
-│ └── BOM.xlsx
-├── Software/
-│ ├── Synthesizer.ino
-│ ├── constants.h
-│ ├── globals.h
-│ ├── audio_setup.h
-│ ├── midi_handling.h
-│ ├── voice_management.h
-│ ├── modes.h
-│ ├── adsr_lfo.h
-│ ├── arpeggiator.h
-│ ├── ui_display.h
-│ └── control_inputs.h
-├── Documentation/
-│ ├── Final_Report.md
-│ ├── System_Architecture_Diagram.png │ └── Software_Flowchart.png ├── Test_Results/
-│ ├── MIDI_Latency/
-│ │ ├── latency_results.xlsx │ │ └── oscilloscope_screenshots/ │ ├── Polyphony_Tests/
-│ │ └── cpu_utilization_graphs/ │ └── Audio_Quality/
-│ ├── THD_SNR_reports.pdf │ └── analyzer_screenshots/ ├── Extras/
-│ ├── Photos_Videos/
-│ │ ├── prototype_photos/ │ │ └── demo_videos/ │ └── Reference_Materials/
-│ ├── reference_links.md │ └── tutorials.md └── Source_Code_Examples/
-└── Examples/ ├── ADSR_example.ino ├── LFO_example.ino └── Arpeggiator_example.ino
-
-markdown
-Copy
-Edit
-
----
-
 ## 🛠️ Getting Started
 
 ### Prerequisites
