@@ -1,6 +1,8 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
+#include <Arduino.h>
+#include <USBHost_t36.h>
 #include "constants.h"
 
 // USB Globals
@@ -15,12 +17,10 @@ extern byte activeNotes[MAX_POLYPHONY];
 extern bool keyState[128];
 extern byte roundRobinIndex;
 
-
-// Buffer for keys (if used)
+// Key Buffer and Arpeggiator
 extern byte keyBuffer[BUFFER_SIZE];
 extern byte keyBufferSize;
 
-// Arpeggiator Globals
 extern byte arpNotes[BUFFER_SIZE];
 extern byte arpCount;
 extern byte currentArpIndex;
@@ -30,7 +30,7 @@ extern byte previousStep;
 extern byte frozenArpNotes[BUFFER_SIZE];
 extern byte frozenArpCount;
 
-// Button states
+// Button States and Pins
 extern const int modeButtonPin;
 extern const int waveChangeButtonPin;
 extern const int effectButtonPin;
@@ -40,8 +40,15 @@ extern bool lastEffectButtonState;
 extern bool effectEnabled;
 
 // ADSR/LFO Globals
-extern int gAttack, gDecay, gRelease;
-extern float gSustain, gLFOSpeed, gLFOdepth;
+extern int gAttack;
+extern int gDecay;
+extern float gSustain;
+extern int gRelease;
+extern float gLFOSpeed;
+extern float gLFOdepth;
+
+extern float LFOspeed;
+extern float LFOdepth;
 
 // Waveform and Mode State
 extern int currentWaveformIndex;

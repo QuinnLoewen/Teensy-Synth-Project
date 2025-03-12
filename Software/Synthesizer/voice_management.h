@@ -4,6 +4,43 @@
 #include "constants.h"
 #include "globals.h"
 
+inline void oscPlay(byte note) {
+  snapBackWave.frequency(noteFreqs[note]);
+  snapBackWaveStack.frequency(noteFreqs[note + OCTAVE_SHIFT]);
+  float velo = globalVelocity * DIV127;
+  snapBackWave.amplitude(velo);
+  snapBackWaveStack.amplitude(velo);
+  snapBackEnv.noteOn();
+}
+
+inline void oscStop() {
+  snapBackEnv.noteOff();
+}
+
+
+inline void keyBuff(byte note, bool noteOn) {
+  if (noteOn && keyBufferSize < BUFFER_SIZE) {
+    oscPlay(note);
+    keyBuffer[keyBufferSize++] = note;
+    return;
+  } else if (!noteOn && keyBufferSize > 0) {
+    for (byte i = 0; i < keyBufferSize; i++) {
+      if (keyBuffer[i] == note) {
+        for (byte j = i; j < keyBufferSize - 1; j++) {
+          keyBuffer[j] = keyBuffer[j + 1];
+        }
+        keyBufferSize--;
+        keyBuffer[keyBufferSize] = 255;
+        if (keyBufferSize > 0)
+          oscPlay(keyBuffer[keyBufferSize - 1]);
+        else
+          oscStop();
+        break;
+      }
+    }
+  }
+}
+
 
 inline void playPolyNote(byte note) {
   byte voiceIndex = roundRobinIndex;

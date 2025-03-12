@@ -26,10 +26,6 @@ const int modeButtonPin = 33;
 const int waveChangeButtonPin = 35;
 const int effectButtonPin = 36;
 
-// --- Global LFO Variables ---
-float LFOdepth = 0.0f;
-float LFOspeed = 0.0f;
-
 
 const float detuneFactors[MAX_POLYPHONY] = {
   1.0, 1.0005776, 0.9994224, 1.0011552,

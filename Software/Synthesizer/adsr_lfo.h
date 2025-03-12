@@ -19,11 +19,22 @@ inline void ADSRUpdate() {
   float sustain = rawSustain / 1023.0f;
   int releaseVal = (rawRelease * 3000) / 1023;
 
+
   // Update global display variables
   gAttack = attack;
   gDecay = decay;
   gSustain = sustain;
   gRelease = releaseVal;
+
+  Serial.print("ADSR Update: ");
+  Serial.print("rawAttack = "); Serial.print(rawAttack);
+  Serial.print(" -> attack = "); Serial.print(attack);
+  Serial.print(" | rawDecay = "); Serial.print(rawDecay);
+  Serial.print(" -> decay = "); Serial.print(decay);
+  Serial.print(" | rawSustain = "); Serial.print(rawSustain);
+  Serial.print(" -> sustain = "); Serial.print(sustain, 3);
+  Serial.print(" | rawRelease = "); Serial.print(rawRelease);
+  Serial.print(" -> release = "); Serial.println(releaseVal);
 
   if (currentState == SNAP_MODE) {
     snapBackEnv.attack(attack);
@@ -41,8 +52,8 @@ inline void ADSRUpdate() {
 }
 
 inline void LFOUpdate() {
-  LFOspeed = map(analogRead(potLFOSpeed), 0, 1023, 1, 200) / 10.0f;
-  LFOdepth = analogRead(potLFODepth) / 1023.0f;
+  float LFOspeed = map(analogRead(potLFOSpeed), 0, 1023, 1, 200) / 10.0f;
+  float LFOdepth = analogRead(potLFODepth) / 1023.0f;
   LFO.frequency(LFOspeed);
   LFO.amplitude(LFOdepth);
 

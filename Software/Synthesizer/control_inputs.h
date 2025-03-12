@@ -5,6 +5,14 @@
 #include "constants.h"
 #include "globals.h"
 
+inline void changeWaveform(int waveformType) {
+  for (byte i = 0; i < MAX_WAVEFORMS; i++) {
+    polyWaves[i].begin(waveformType);
+  }
+  snapBackWave.begin(waveformType);
+  snapBackWaveStack.begin(waveformType);
+}
+
 inline void checkWaveformChange() {
   bool newWaveButtonState = digitalRead(waveChangeButtonPin);
   if (newWaveButtonState == HIGH && lastWaveButtonState == LOW) {
@@ -28,5 +36,6 @@ inline void updateEffect() {
   }
   lastEffectButtonState = newEffectButtonState;
 }
+
 
 #endif

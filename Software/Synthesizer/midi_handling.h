@@ -53,6 +53,7 @@ inline void myNoteOff(byte channel, byte note, byte velocity) {
   }
 }
 
+
 inline void setUpUSBMidi() {
   myusb.begin();
   midi1.setHandleNoteOn(myNoteOn);
