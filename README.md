@@ -37,55 +37,84 @@ The **Teensy Synth Project** is a powerful and portable synthesizer leveraging t
 
 1. **Clone the repository:**
 
-```bash
-git clone https://github.com/yourusername/Teensy-Synth-Project.git
-cd Teensy-Synth-Project
-Hardware Assembly:
-Consult the Hardware/Schematics/ folder for circuit diagrams.
-Assemble hardware components according to provided schematics and PCB layouts.
-Software Installation:
-Open the Synthesizer.ino file located in Software/ in Arduino IDE.
-Set board type to Teensy 4.1.
-Install required libraries through Arduino Library Manager.
-Upload the sketch to the Teensy 4.1.
-🎚️ Usage
-Mode Button: Switch between Polyphonic, Snap-back, and Arpeggiator modes.
-Waveform Button: Cycle through available waveform types (Sine, Square, Triangle, Sawtooth).
-Effect Button: Enable or disable the global delay effect.
-Potentiometers: Adjust Attack, Decay, Sustain, Release (ADSR envelope) and LFO parameters in real-time.
-Display: TFT screen displays current mode, waveform type, ADSR envelope, and LFO parameters.
-🧪 Testing & Results
-Detailed test procedures and results are located in the Test_Results/ directory:
+   ```bash
+   git clone https://github.com/yourusername/Teensy-Synth-Project.git
+   cd Teensy-Synth-Project
+   ```
 
-MIDI Latency Tests: Measured MIDI-to-audio latency (~1.2 ms average).
-Polyphony Performance: Verified 8-voice polyphony with stable CPU usage (~55%).
-Audio Quality Tests: Confirmed THD < 0.01% and SNR > 100 dB.
-See the full report in Documentation/Final_Report.md.
+2. **Hardware Assembly:**
+   - Consult the `Hardware/Schematics/` folder for circuit diagrams.
+   - Assemble hardware components according to provided schematics and PCB layouts.
 
-🤝 Contributing
+3. **Software Installation:**
+   - Open the `Synthesizer.ino` file located in `Software/` in Arduino IDE.
+   - Set board type to `Teensy 4.1`.
+   - Install required libraries through Arduino Library Manager.
+   - Upload the sketch to the Teensy 4.1.
+
+---
+
+## 🎚️ Usage
+
+- **Mode Button:** Switch between Polyphonic, Snap-back, and Arpeggiator modes.
+- **Waveform Button:** Cycle through available waveform types (Sine, Square, Triangle, Sawtooth).
+- **Effect Button:** Enable or disable the global delay effect.
+- **Potentiometers:** Adjust Attack, Decay, Sustain, Release (ADSR envelope) and LFO parameters in real-time.
+- **Display:** TFT screen displays current mode, waveform type, ADSR envelope, and LFO parameters.
+
+---
+
+## 🧪 Testing & Results
+
+Detailed test procedures and results are located in the `Test_Results/` directory:
+
+- **MIDI Latency Tests:** Measured MIDI-to-audio latency (~1.2 ms average).
+- **Polyphony Performance:** Verified 8-voice polyphony with stable CPU usage (~55%).
+- **Audio Quality Tests:** Confirmed THD < 0.01% and SNR > 100 dB.
+
+See the full report in `Documentation/Final_Report.md`.
+
+---
+
+## 🤝 Contributing
+
 Contributions and suggestions are welcome:
 
-Fork the repository.
-Create your feature branch (git checkout -b feature/my-feature).
-Commit your changes (git commit -m 'Add my feature').
-Push to your branch (git push origin feature/my-feature).
-Open a Pull Request describing your changes clearly.
-📜 License
-Distributed under the MIT License. See LICENSE.md for details.
+1. Fork the repository.
+2. Create your feature branch:
+   ```bash
+   git checkout -b feature/my-feature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m 'Add my feature'
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature/my-feature
+   ```
+5. Open a Pull Request describing your changes clearly.
 
-🌟 Acknowledgements
-Teensy Documentation
-Teensy Audio Library
-Adafruit GFX Library
-Adafruit ST7735 Library
-USB MIDI Specification
-🔮 Future Enhancements
-Additional audio effects (reverb, chorus, phaser)
-Advanced modulation capabilities
-Expanded visualizations and UI improvements on the TFT display
-Optimization for increased polyphony (more than 8 voices)
-📬 Contact Information
-For questions or support, please reach out:
+---
 
-Your Name: your.email@example.com
-GitHub Profile: Your GitHub
+
+## 🌟 Acknowledgements
+
+- Teensy Documentation
+- Teensy Audio Library
+- Adafruit GFX Library
+- Adafruit ST7735 Library
+- USB MIDI Specification
+
+---
+
+## 🔮 Future Enhancements
+
+- Additional audio effects (reverb, chorus, phaser)
+- Advanced modulation capabilities
+- Expanded visualizations and UI improvements on the TFT display
+- Optimization for increased polyphony (more than 8 voices)
+
+---
+
+
