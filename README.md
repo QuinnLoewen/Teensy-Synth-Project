@@ -68,8 +68,8 @@ Below is the **Teensy Synth Project** schematic.
 For the KiCad source files for just the Teensy, check the [`Hardware/PCB_Layouts/teensy_pbc_no_analog`](Hardware/PCB_Layouts/teensy_pbc_no_analog) folder.
 For the KiCad project source files, check the [`Hardware/PCB_Layouts/teensy_pbc`](Hardware/PCB_Layouts/teensy_pbc) folder.
 
-![Teensy Synth Schematic](Hardware/Schematics/teensy_synth_schematic.png)
-[📄 View PDF Version](Hardware/Schematicss/teensy_synth_schematic.pdf)
+![Teensy Synth Schematic](Hardware/Schematics/teensy_synth_schematic_no_analog.png)
+[📄 View PDF Version](Hardware/Schematicss/teensy_synth_schematic_no_analog.pdf)
 
 ## 🧪 Testing & Results
 
