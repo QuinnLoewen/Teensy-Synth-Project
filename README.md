@@ -63,6 +63,13 @@ The **Teensy Synth Project** is a powerful and portable synthesizer leveraging t
 - **Display:** TFT screen displays current mode, waveform type, ADSR envelope, and LFO parameters.
 
 ---
+## 📜 Circuit Schematic
+Below is the **Teensy Synth Project** schematic.  
+For the KiCad source files for just the Teensy, check the [`Hardware/PCB_Layouts/teensy_pbc_no_analog`](Hardware/PCB_Layouts/teensy_pbc_no_analog) folder.
+For the KiCad project source files, check the [`Hardware/PCB_Layouts/teensy_pbc`](Hardware/PCB_Layouts/teensy_pbc) folder.
+
+![Teensy Synth Schematic](Hardware/Schematics/teensy_synth_schematic.png)
+[📄 View PDF Version](Hardware/Schematicss/teensy_synth_schematic.pdf)
 
 ## 🧪 Testing & Results
 
