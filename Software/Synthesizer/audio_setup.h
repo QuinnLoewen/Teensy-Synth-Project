@@ -63,8 +63,10 @@ AudioConnection patchCordBigMaster2(PolyMasterMix, 0, BigMasterMixer, 0);
 AudioConnection patchCordDelay(BigMasterMixer, 0, delayEffect, 0);
 AudioConnection patchCordDelayOut(delayEffect, 0, audioOut, 1);
 
+//AudioConnection patchCordStandAlone(BigMasterMixer, 1, audioOut, 1);
+
 // LFO routing: LFO output remains on audioOut channel 0.
-AudioConnection patchCordAudioOut2(LFO, 0, audioOut, 0);
+AudioConnection patchCordAudioOut2(LFO, 0, audioOut, 0);  //comment this out for standalone
 
 void setUpAudio() {
   AudioMemory(30);
